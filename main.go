@@ -76,7 +76,7 @@ func main() {
 		c.Stdin = os.Stdin
 		c.Stdout = os.Stdout
 		c.Stderr = os.Stderr
-		if err := c.Run(); err != nil {
+		if err := c.Start(); err != nil {
 			log.Fatalln(err)
 		}
 
@@ -93,7 +93,7 @@ func main() {
 				c.Stdin = os.Stdin
 				c.Stdout = os.Stdout
 				c.Stderr = os.Stderr
-				if err := c.Run(); err != nil {
+				if err := c.Start(); err != nil {
 					log.Println(err)
 					continue
 				}
